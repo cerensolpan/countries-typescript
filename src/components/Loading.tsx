@@ -1,7 +1,8 @@
 import { FunctionComponent } from "react";
 
 interface ILoadingProps {
-  loading: boolean;
+    children: any;
+    loading: boolean;
 }
 
 const Loading: FunctionComponent<ILoadingProps> = (props) => {

@@ -9,7 +9,7 @@ interface ICountyrProps {
 const Country: FunctionComponent<ICountyrProps> = (props) => {
     const { country } = props;
     return (
-        <p>{country.name} </p>
+        <p>{country.name.common} </p>
     );
 }
 

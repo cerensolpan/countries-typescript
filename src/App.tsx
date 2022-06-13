@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
     try {
       const { data } = await axios.get<CountryType[]>(
-        "https://restcountries.eu/rest/v2/all"
+        "https://restcountries.com/v3.1/all"
       );
       setCountries(data);
     } catch {
@@ -27,11 +27,13 @@ function App() {
     getCountries();
   }, []);
 
+  console.log('countries :>> ', countries);
+
   return (
     <div>
       <Loading loading={loading}>
-        {countries.map((country) => {
-          return <Country key={country.name} country={country} />;
+        {countries.map((country,index) => {
+          return <Country key={index} country={country} />;
         })}
       </Loading>
     </div>
